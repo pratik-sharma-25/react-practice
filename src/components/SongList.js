@@ -25,16 +25,9 @@ const SongList = ({ songs, selectSong }) => {
 };
 
 const mapStateToProps = state => {
-	console.log(state);
 	return {
 		songs: state.songs
 	};
 };
 
-const mapDispatchToProps = () => {
-	return {
-		selectSong
-	};
-};
-
-export default connect(mapStateToProps, mapDispatchToProps())(SongList);
+export default connect(mapStateToProps, { selectSong })(SongList);
